@@ -30,7 +30,7 @@ const Score = ({ game, size }) => {
 };
 
 Score.propTypes = {
-  game: PT.array.isRequired,
+  game: PT.object.isRequired,
   size: PT.number.isRequired,
 };
 
