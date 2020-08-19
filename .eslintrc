@@ -1,0 +1,14 @@
+{
+  "extends": [
+    "react-app",
+    "eslint:recommended",
+    "plugin:react/recommended", 
+    "prettier", 
+    "prettier/react"
+  ]
+}
+
+// Инструкция по настройке: (https://www.youtube.com/watch?v=bfyI9yl3qfE)
+// 1.1 Скачать ESLint-plugin-React: npm install eslint-plugin-react --save-dev
+// 1.2 Скачать конфиг для Prittier: npm install --save-dev eslint-config-prettier
+// 2. Создать объект (см. выше) в котором в точном порядке создать свойства extends

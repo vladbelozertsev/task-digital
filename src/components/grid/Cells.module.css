@@ -1,0 +1,10 @@
+.cells {
+  align-content: center;
+  border: 2px solid black;
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(var(--size), auto);
+  grid-template-rows: repeat(var(--size), 1fr);
+  justify-content: center;
+  padding: 25px;
+}

@@ -1,0 +1,51 @@
+.cell {
+  align-items: center;
+  background-color: #b3b3b3;
+  border: 2px solid #919191;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  font-size: 32px;
+  font-weight: bold;
+  height: 200px;
+  justify-content: center;
+  transition: 1s;
+  width: 200px;
+}
+
+.cell:hover {
+  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.65);
+}
+
+.cell.red {
+  background-color: tomato;
+  border: 2px solid red;
+  cursor: auto;
+  /* transform: rotateY(360deg); */
+}
+
+.cell.blue {
+  background-color: skyblue;
+  border: 2px solid blue;
+  cursor: auto;
+  /* transform: rotateY(360deg); */
+}
+
+.cell.red.opened {
+  border: 3px dashed red;
+  box-shadow: 0px 0px 15px 5px rgba(255, 0, 0, 0.65);
+}
+
+.cell.blue.opened {
+  border: 3px dashed blue;
+  box-shadow: 0px 0px 15px 5px rgba(0, 0, 255, 0.65);
+}
+
+.cell.hide {
+  /* https://stackoverflow.com/questions/7048313/how-to-have-multiple-css-transitions-on-an-element */
+  /*переопределяем transition из .cell*/
+  transition: opacity 1.5s cubic-bezier(1, 0.01, 1, -0.06),
+    visibility 1.5s cubic-bezier(1, 0.01, 1, -0.06), background-color 1s;
+  opacity: 0;
+  visibility: hidden;
+}
