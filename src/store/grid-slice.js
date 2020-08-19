@@ -56,11 +56,8 @@ const gridSlice = createSlice({
         state.game.wasClicked = action.payload;
       }
     },
-    reset: (state) => {
-      state.size = initialState.size;
-      state.colors = initialState.colors;
-      state.game = initialState.game;
-    },
+    // https://stackoverflow.com/questions/59424523/reset-state-to-initial-with-redux-toolkit
+    reset: () => initialState,
   },
 });
 
