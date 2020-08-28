@@ -1,8 +1,8 @@
-import React from "react";
 import PT from "prop-types";
-import styles from "./Cell.module.css";
+import React from "react";
 import { useDispatch } from "react-redux";
 import { setGame } from "../../store/grid-slice";
+import styles from "./Cell.module.css";
 
 // https://stackoverflow.com/questions/33262493/how-to-add-a-class-with-react-js
 const Cell = ({ index, color, game }) => {
@@ -14,7 +14,7 @@ const Cell = ({ index, color, game }) => {
 
   const openedStyle = opened ? `${styles[color]} ${styles.opened}` : null;
   const successStyle = success ? `${styles[color]} ${styles.hide}` : null;
-  const defeatStyle = defeat ? styles[color] : null;
+  const defeatStyle = defeat ? `${styles[color]} ${styles.defeat} ` : null;
   const cellClassList = `${styles.cell} ${openedStyle} ${successStyle} ${defeatStyle}`;
 
   const handleClick = () => {
@@ -26,6 +26,7 @@ const Cell = ({ index, color, game }) => {
   return (
     <div className={cellClassList} onClick={handleClick}>
       {index + 1}
+      {defeat ? <div>{"CLOSED"}</div> : null}
     </div>
   );
 };

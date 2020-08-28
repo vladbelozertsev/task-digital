@@ -1,5 +1,5 @@
-import React from "react";
 import PT from "prop-types";
+import React from "react";
 import { useDispatch } from "react-redux";
 import { reset } from "../../store/grid-slice";
 import styles from "./Score.module.css";

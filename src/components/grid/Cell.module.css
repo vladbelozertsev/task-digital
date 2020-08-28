@@ -11,6 +11,7 @@
   justify-content: center;
   transition: 1s;
   width: 200px;
+  flex-direction: column;
 }
 
 .cell:hover {
@@ -48,4 +49,8 @@
     visibility 1.5s cubic-bezier(1, 0.01, 1, -0.06), background-color 1s;
   opacity: 0;
   visibility: hidden;
+}
+
+.defeat {
+  opacity: 0.6;
 }
